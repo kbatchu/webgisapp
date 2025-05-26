@@ -36932,12 +36932,29 @@ function OLMap() {
     mMapVectorLyr = vectorLyr;
     mActiveMapLyrName = config.LayerName;
 
+    //? Force map to update
+    mMap.updateSize(); // 26May2025
+
+    /*  // 26May2025
     // ? fit to map extent
-    var layerExtent = vectorLyrSource.getExtent(); // ? get layer extent
+    const layerExtent = vectorLyrSource.getExtent(); // ? get layer extent
     mMapView.fit(layerExtent, {
       size: mMap.getSize()
     });
-    mMap.render();
+    mMap.render(); */
+
+    // 26May2025
+    // Use setTimeout to ensure the layer is fully loaded before zooming
+    setTimeout(function () {
+      // ? fit to map extent
+      var layerExtent = vectorLyrSource.getExtent();
+
+      // Add padding for point features and limit max zoom
+      mMapView.fit(layerExtent, {
+        size: mMap.getSize()
+      });
+      mMap.render();
+    }, 100); // Short delay to ensure features are processed
   };
   publicAPI.updateSize = function () {
     mMap.updateSize();
