@@ -36954,7 +36954,7 @@ function OLMap() {
         size: mMap.getSize()
       });
       mMap.render();
-    }, 100); // Short delay to ensure features are processed
+    }, 300); // Short delay to ensure features are processed
   };
   publicAPI.updateSize = function () {
     mMap.updateSize();
