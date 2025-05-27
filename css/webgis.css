@@ -336,9 +336,9 @@ table.dataTable thead .colAlignLeft.sorting {
 .layer-visibility-toggle {
   margin: 0;
   margin-right: 10px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   margin-top: 2px; /* Match the same top margin as the icon */
-  cursor:pointer;
+  cursor: pointer;
   position: relative;
   z-index: 10; /* Ensure checkbox is above other elements */
 }
@@ -408,11 +408,9 @@ table.dataTable thead .colAlignLeft.sorting {
   .layer-name-container label {
     align-self: flex-start; /* Align to top when likely to wrap */
   }
-  
+
   .layer-name-container i,
   .layer-name-container img {
     align-self: flex-start; /* Align icon to top when text wraps */
   }
 }
-
-

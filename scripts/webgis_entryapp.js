@@ -39506,7 +39506,7 @@ function WebGIS() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#radBtnResultsMap").prop("disabled", false); // 20Feb2025
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#radBtnResultsMap").prop("checked", true);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#layer-control").removeClass("d-none"); // 25Jan2025
-    // 20Feb2025 deactivateResultsDataTableView(); // 20Aug2024
+    deactivateResultsDataTableView(); // 20Aug2024
   }
 
   // 20Aug2024
